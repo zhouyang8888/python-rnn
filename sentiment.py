@@ -98,5 +98,5 @@ for sentence in  INPUT_SENTENCES:
 XX = sequence.pad_sequences(XX, maxlen=MAX_SENTENCE_LENGTH)
 labels = [int(round(x[0])) for x in model.predict(XX) ]
 label2word = {1:'积极', 0:'消极'}
-for i in rang(len(INPUT_SENTENCES)):
+for i in range(len(INPUT_SENTENCES)):
     print('{}   {}'.format(label2word[labels[i]], INPUT_SENTENCES[i]))
